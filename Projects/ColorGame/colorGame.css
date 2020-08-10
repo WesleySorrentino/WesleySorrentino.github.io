@@ -42,6 +42,12 @@ h1 {
     font-size: 200%;
 }
 
+@media screen and (min-width: 375px) {
+    #colorDisplay {
+        font-size: 150%;
+    }
+}
+
 #message {
     display: inline-block;
     width: 20%;
