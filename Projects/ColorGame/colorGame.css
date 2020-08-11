@@ -42,12 +42,6 @@ h1 {
     font-size: 200%;
 }
 
-@media screen and (min-width: 375px) {
-    #colorDisplay {
-        font-size: 150%;
-    }
-}
-
 #message {
     display: inline-block;
     width: 20%;
@@ -77,4 +71,28 @@ button {
 button:hover {
     color: white;
     background: steelblue;
+}
+
+@media screen and (min-width: 375px) {
+    #colorDisplay {
+        font-size: 150%;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    #colorDisplay {
+        font-size: 125%;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    #colorDisplay {
+        font-size: 100%;
+    }
+}
+
+@media screen and (min-width: 280px) {
+    #colorDisplay {
+        font-size: 95%;
+    }
 }
