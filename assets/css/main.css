@@ -72,6 +72,28 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Contact Form */
+
+#form {
+	display: block;
+	text-align: center;
+}
+
+#contactForm {
+	display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input, button {
+	margin: 1rem 0;
+	width: 100%;
+}
+
+h4 {
+	padding: 1rem 0;
+}
+
 /* Basic */
 
 	@-ms-viewport {

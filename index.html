@@ -110,7 +110,32 @@
 
 				<!-- Footer -->
 					<section id="footer">
-						<div class="inner">						
+						<div class="inner">
+							<h2 class="major">Contact me!</h2>
+							<div id="form">
+								<form id="contactForm">
+									<div class="inputs">
+										<h4>Name</h4>
+										<input type="text" name="name" required>
+									</div>
+									<div class="inputs">
+										<h4>Email</h4>
+										<input type="email" name="email" required>
+									</div>
+									<div class="inputs">
+										<h4>Phone Number</h4>
+										<input type="tel" name="phone" required>
+									</div>
+									<div class="inputs">
+										<h4>Message</h4>
+										<textarea name="message"cols="30" rows="10" required></textarea>
+									</div>
+									<div class="inputs">
+										<button type="submit" value="Send">Submit Form</button>
+									</div>
+								</form>
+							</div>
+							
 							<ul class="copyright">
 								<li>&copy; Wesley Sorrentino. All rights reserved.</li><li><a href="https://github.com/WesleySorrentino"><i class="fab fa-github"></i></a></li><li><a href="https://www.linkedin.com/in/wesley-sorrentino-863822179/"><i class="fab fa-linkedin-in"></i></a></li></li>
 							</ul>
@@ -125,6 +150,29 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+			<!-- EMAILJS -->
+			<script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+			<script type="text/javascript">
+			(function() {
+			emailjs.init("user_rXzxElEER12dPgrMBDa9m");
+			})();
+			</script>
+			<script>
+				window.onload = function () {
+					document.getElementById('contactForm').addEventListener('submit', function (event) {
+						event.preventDefault();
+						// Send email
+						emailjs.sendForm("service_ixfuf1e", "template_3vmwv8q", this);
+						swal({
+							icon: 'success',
+							title: 'Thank You!',
+							text: 'Your message has been sent. Wesley will get back to you shortly!'
+						});
+						document.getElementById('contactForm').reset();
+					});
+				}
+			</script>
 	</body>
 </html>
